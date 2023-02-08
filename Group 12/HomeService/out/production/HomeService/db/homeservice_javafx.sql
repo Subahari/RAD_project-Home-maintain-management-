@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Aug 01, 2021 at 07:15 PM
--- Server version: 5.7.21
--- PHP Version: 7.2.4
+-- Host: 127.0.0.1
+-- Generation Time: Jan 07, 2022 at 07:27 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -28,8 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-DROP TABLE IF EXISTS `admin`;
-CREATE TABLE IF NOT EXISTS `admin` (
+CREATE TABLE `admin` (
   `username` varchar(250) CHARACTER SET utf8 NOT NULL,
   `password` varchar(250) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -47,9 +45,8 @@ INSERT INTO `admin` (`username`, `password`) VALUES
 -- Table structure for table `home_owners`
 --
 
-DROP TABLE IF EXISTS `home_owners`;
-CREATE TABLE IF NOT EXISTS `home_owners` (
-  `house_ownersID` int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `home_owners` (
+  `house_ownersID` int(10) NOT NULL,
   `title` varchar(10) NOT NULL,
   `firstname` varchar(20) NOT NULL,
   `lastname` varchar(20) NOT NULL,
@@ -57,9 +54,8 @@ CREATE TABLE IF NOT EXISTS `home_owners` (
   `home_telephone_No` int(10) NOT NULL,
   `username` varchar(20) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `address` varchar(100) NOT NULL,
-  PRIMARY KEY (`house_ownersID`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+  `address` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `home_owners`
@@ -82,21 +78,19 @@ INSERT INTO `home_owners` (`house_ownersID`, `title`, `firstname`, `lastname`, `
 -- Table structure for table `reservation`
 --
 
-DROP TABLE IF EXISTS `reservation`;
-CREATE TABLE IF NOT EXISTS `reservation` (
-  `reservation_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `reservation` (
+  `reservation_id` int(11) NOT NULL,
   `home_owner_id` int(11) NOT NULL,
   `worker_id` int(11) NOT NULL,
   `reservation_date` date NOT NULL,
   `reservation_start_time` time NOT NULL,
   `reservation_end_time` time NOT NULL,
   `reservation_details` varchar(250) NOT NULL,
-  `submit_dateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `submit_dateTime` timestamp NOT NULL DEFAULT current_timestamp(),
   `worker_remark` varchar(50) NOT NULL DEFAULT 'Waiting For Approval',
   `worker_reply` varchar(250) NOT NULL DEFAULT 'Wait For Reply',
-  `homeowner_reply` varchar(250) DEFAULT NULL,
-  PRIMARY KEY (`reservation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+  `homeowner_reply` varchar(250) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `reservation`
@@ -113,12 +107,10 @@ INSERT INTO `reservation` (`reservation_id`, `home_owner_id`, `worker_id`, `rese
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `username` varchar(20) CHARACTER SET utf8 NOT NULL,
   `password` varchar(20) CHARACTER SET utf8 NOT NULL,
-  `userroll` varchar(20) CHARACTER SET utf8 NOT NULL DEFAULT 'house_owners',
-  PRIMARY KEY (`username`)
+  `userroll` varchar(20) CHARACTER SET utf8 NOT NULL DEFAULT 'house_owners'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -154,18 +146,16 @@ INSERT INTO `users` (`username`, `password`, `userroll`) VALUES
 -- Table structure for table `workers`
 --
 
-DROP TABLE IF EXISTS `workers`;
-CREATE TABLE IF NOT EXISTS `workers` (
-  `workerID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `workers` (
+  `workerID` int(11) NOT NULL,
   `title` varchar(5) CHARACTER SET utf8 NOT NULL,
   `firstname` varchar(20) CHARACTER SET utf8 NOT NULL,
   `lastname` varchar(20) CHARACTER SET utf8 NOT NULL,
   `personalno` int(10) NOT NULL,
   `homeno` int(10) NOT NULL,
   `workerroll` varchar(20) CHARACTER SET utf8 NOT NULL,
-  `username` varchar(20) CHARACTER SET utf8 NOT NULL,
-  PRIMARY KEY (`workerID`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
+  `username` varchar(20) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `workers`
@@ -181,6 +171,56 @@ INSERT INTO `workers` (`workerID`, `title`, `firstname`, `lastname`, `personalno
 (9, 'Mr', 'Varan', 'Prabhu', 771215420, 212214105, 'Electrician', 'varan'),
 (10, 'Mr', 'Raju', 'Ram', 774512520, 212212525, 'Mechanic', 'raju'),
 (12, 'Mr', 'Mani', 'Radna', 774512522, 212221415, 'Painter', 'manith');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `home_owners`
+--
+ALTER TABLE `home_owners`
+  ADD PRIMARY KEY (`house_ownersID`);
+
+--
+-- Indexes for table `reservation`
+--
+ALTER TABLE `reservation`
+  ADD PRIMARY KEY (`reservation_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`username`);
+
+--
+-- Indexes for table `workers`
+--
+ALTER TABLE `workers`
+  ADD PRIMARY KEY (`workerID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `home_owners`
+--
+ALTER TABLE `home_owners`
+  MODIFY `house_ownersID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `reservation`
+--
+ALTER TABLE `reservation`
+  MODIFY `reservation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `workers`
+--
+ALTER TABLE `workers`
+  MODIFY `workerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

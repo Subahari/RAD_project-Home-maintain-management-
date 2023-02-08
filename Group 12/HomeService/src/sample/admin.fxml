@@ -16,7 +16,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="835.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.admin">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.admin">
    <children>
       <AnchorPane prefHeight="191.0" prefWidth="1200.0" style="-fx-background-color: #ff8383;">
          <children>
@@ -66,14 +66,14 @@
          </children></AnchorPane>
       <AnchorPane fx:id="ancAddworkers" layoutX="325.0" layoutY="191.0" prefHeight="645.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="348.0" layoutY="14.0" prefHeight="60.0" prefWidth="258.0" text="Add Worker" textFill="#074f72" underline="true">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="348.0" layoutY="-15.0" prefHeight="60.0" prefWidth="258.0" text="Add Worker" textFill="#074f72" underline="true">
                <font>
                   <Font name="Rage Italic" size="45.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="161.0" layoutY="161.0" prefHeight="463.0" prefWidth="632.0">
+            <AnchorPane layoutX="161.0" layoutY="43.0" prefHeight="463.0" prefWidth="632.0">
                <children>
-                  <JFXButton fx:id="btnaddworkadd" buttonType="RAISED" layoutX="41.0" layoutY="383.0" onAction="#add" prefHeight="50.0" prefWidth="238.0" style="-fx-background-color: #006978; -fx-background-radius: 5px;" text="Add Worker" textFill="WHITE">
+                  <JFXButton fx:id="btnaddworkadd" buttonType="RAISED" layoutX="41.0" layoutY="363.0" onAction="#add" prefHeight="50.0" prefWidth="238.0" style="-fx-background-color: #006978; -fx-background-radius: 5px;" text="Add Worker" textFill="WHITE">
                      <font>
                         <Font name="Trebuchet MS" size="27.0" />
                      </font>
@@ -89,7 +89,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </JFXButton>
-                  <JFXButton fx:id="btnaddworkclear" buttonType="RAISED" layoutX="354.0" layoutY="383.0" onAction="#clear" prefHeight="50.0" prefWidth="238.0" style="-fx-background-color: #006978; -fx-background-radius: 5px;" text="Clear" textFill="WHITE">
+                  <JFXButton fx:id="btnaddworkclear" buttonType="RAISED" layoutX="349.0" layoutY="364.0" onAction="#clear" prefHeight="50.0" prefWidth="238.0" style="-fx-background-color: #006978; -fx-background-radius: 5px;" text="Clear" textFill="WHITE">
                      <font>
                         <Font name="Trebuchet MS" size="27.0" />
                      </font>
@@ -137,7 +137,7 @@
                   </JFXComboBox>
                </children>
             </AnchorPane>
-            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="444.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="606.0" layoutY="-23.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/reg1.png" />
                </image>
@@ -259,37 +259,37 @@
                   <Font name="Rage Italic" size="49.0" />
                </font>
             </Label>
-            <Label layoutX="109.0" layoutY="171.0" prefHeight="48.0" prefWidth="216.0" text="Current Password :" textFill="#080865">
+            <Label layoutX="109.0" layoutY="104.0" prefHeight="48.0" prefWidth="216.0" text="Current Password :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <JFXPasswordField fx:id="pwdCurrentPw" layoutX="367.0" layoutY="170.0" onMouseExited="#checkOldPwWithDb" prefHeight="48.0" prefWidth="445.0">
+            <JFXPasswordField fx:id="pwdCurrentPw" layoutX="367.0" layoutY="103.0" onMouseExited="#checkOldPwWithDb" prefHeight="48.0" prefWidth="445.0">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXPasswordField>
-            <Label layoutX="109.0" layoutY="379.0" prefHeight="48.0" prefWidth="216.0" text="Confirm Password :" textFill="#080865">
+            <Label layoutX="109.0" layoutY="263.0" prefHeight="48.0" prefWidth="216.0" text="Confirm Password :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <JFXPasswordField fx:id="pwdConfirmPw" disable="true" layoutX="367.0" layoutY="379.0" prefHeight="48.0" prefWidth="445.0">
+            <JFXPasswordField fx:id="pwdConfirmPw" disable="true" layoutX="367.0" layoutY="263.0" prefHeight="48.0" prefWidth="445.0">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXPasswordField>
-            <Label layoutX="109.0" layoutY="275.0" prefHeight="48.0" prefWidth="216.0" text="New Password :" textFill="#080865">
+            <Label layoutX="109.0" layoutY="185.0" prefHeight="48.0" prefWidth="216.0" text="New Password :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <JFXPasswordField fx:id="pwdNewpw" disable="true" layoutX="367.0" layoutY="275.0" prefHeight="48.0" prefWidth="445.0">
+            <JFXPasswordField fx:id="pwdNewpw" disable="true" layoutX="367.0" layoutY="181.0" prefHeight="48.0" prefWidth="445.0">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXPasswordField>
-            <JFXButton fx:id="btnChangePwSubmit" buttonType="RAISED" disable="true" layoutX="335.0" layoutY="468.0" onAction="#actChangePwSubmit" prefHeight="59.0" prefWidth="305.0" style="-fx-background-color: #1f367c; -fx-background-radius: 5px;" text="Submit" textFill="WHITE">
+            <JFXButton fx:id="btnChangePwSubmit" buttonType="RAISED" disable="true" layoutX="335.0" layoutY="357.0" onAction="#actChangePwSubmit" prefHeight="59.0" prefWidth="305.0" style="-fx-background-color: #1f367c; -fx-background-radius: 5px;" text="Submit" textFill="WHITE">
                <font>
                   <Font name="Trebuchet MS" size="28.0" />
                </font>
@@ -305,7 +305,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Label fx:id="lblAlertCurrentPw" layoutX="367.0" layoutY="224.0" prefHeight="36.0" prefWidth="445.0" textFill="#e11a1a">
+            <Label fx:id="lblAlertCurrentPw" layoutX="367.0" layoutY="157.0" prefHeight="36.0" prefWidth="445.0" textFill="#e11a1a">
                <font>
                   <Font size="17.0" />
                </font>
@@ -315,7 +315,7 @@
                   <Font size="17.0" />
                </font>
             </Label>
-            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="443.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="634.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/icons8-password-100.png" />
                </image>
@@ -324,7 +324,7 @@
       </AnchorPane>
       <AnchorPane fx:id="ancMenuHouseOwners" layoutX="325.0" layoutY="191.0" prefHeight="645.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
          <children>
-            <TableView fx:id="tabHouseOwners" layoutX="26.0" layoutY="144.0" onMouseClicked="#clickRow" prefHeight="434.0" prefWidth="924.0" stylesheets="@table.css">
+            <TableView fx:id="tabHouseOwners" layoutX="19.0" layoutY="65.0" onMouseClicked="#clickRow" prefHeight="385.0" prefWidth="931.0" stylesheets="@table.css">
                <columns>
                   <TableColumn fx:id="colHoid" prefWidth="58.0" text="HO_ID" />
                   <TableColumn fx:id="colHoFullname" minWidth="0.0" prefWidth="212.0" text="Full Name" />
@@ -337,12 +337,12 @@
                   <Cursor fx:constant="OPEN_HAND" />
                </cursor>
             </TableView>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="274.0" layoutY="6.0" prefHeight="71.0" prefWidth="412.0" text="House Owners Details" textFill="#074f72" underline="true">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="274.0" layoutY="-16.0" prefHeight="71.0" prefWidth="412.0" text="House Owners Details" textFill="#074f72" underline="true">
                <font>
                   <Font name="Rage Italic" size="45.0" />
                </font>
             </Label>
-            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="444.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="675.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/icons8-user-group-100.png" />
                </image>

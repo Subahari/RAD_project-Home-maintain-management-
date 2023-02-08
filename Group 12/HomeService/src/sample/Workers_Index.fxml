@@ -54,9 +54,9 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutY="195.0" prefHeight="645.0" prefWidth="325.0" style="-fx-background-color: #ffe8e8;">
+      <AnchorPane layoutY="195.0" prefHeight="600.0" prefWidth="280.0" style="-fx-background-color: #ffe8e8;">
          <children>
-            <AnchorPane fx:id="ancHouseownerSidebar" layoutX="7.0" layoutY="71.0" prefHeight="530.0" prefWidth="313.0">
+            <AnchorPane fx:id="ancHouseownerSidebar" layoutX="7.0" layoutY="71.0" prefHeight="500.0" prefWidth="280.0">
                <children>
                   <JFXButton fx:id="btnMenuHome_HO" buttonType="RAISED" layoutX="71.0" layoutY="26.0" onAction="#actMenuHome_HO" prefHeight="48.0" prefWidth="227.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Home" textFill="WHITE">
                      <font>
@@ -173,12 +173,12 @@
          </children></AnchorPane>
      <AnchorPane fx:id="ancMyReservation_HO" layoutX="325.0" layoutY="195.0" prefHeight="650.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
          <children>
-            <Label layoutX="320.0" layoutY="10.0" prefHeight="76.0" prefWidth="305.0" text="My Reservation" textFill="#0b6d7c" underline="true">
+            <Label layoutX="321.0" layoutY="-12.0" prefHeight="76.0" prefWidth="305.0" text="My Reservation" textFill="#0b6d7c" underline="true">
                <font>
                   <Font name="Rage Italic" size="49.0" />
                </font>
             </Label>
-            <TableView fx:id="tabMyReservation" layoutX="29.0" layoutY="106.0" onMouseClicked="#clickResRow" prefHeight="283.0" prefWidth="925.0" stylesheets="@table.css">
+            <TableView fx:id="tabMyReservation" layoutX="25.0" layoutY="64.0" onMouseClicked="#clickResRow" prefHeight="255.0" prefWidth="925.0" stylesheets="@table.css">
                <columns>
                   <TableColumn fx:id="colResID" prefWidth="68.0" text="Res_ID" />
                   <TableColumn fx:id="colHoName" minWidth="0.0" prefWidth="177.0" text="House_Owner_Name" />
@@ -195,7 +195,7 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <AnchorPane layoutX="249.0" layoutY="523.0" prefHeight="98.0" prefWidth="477.0">
+            <AnchorPane layoutX="249.0" layoutY="440.0" prefHeight="98.0" prefWidth="477.0">
                <children>
                   <JFXButton fx:id="btnResSubmitReply" alignment="CENTER_RIGHT" buttonType="RAISED" disable="true" layoutX="131.0" layoutY="17.0" onAction="#actResSubmitReply" prefHeight="65.0" prefWidth="216.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="SEND-REPLY" textFill="#ed9918">
                      <font>
@@ -220,7 +220,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="2.0" layoutY="411.0" prefHeight="105.0" prefWidth="942.0">
+            <AnchorPane layoutX="2.0" layoutY="320.0" prefHeight="105.0" prefWidth="942.0">
                <children>
                   <JFXTextArea fx:id="txtResMyReply" focusColor="#009688" layoutX="370.0" layoutY="11.0" prefHeight="84.0" prefWidth="274.0" promptText="Enter Your Reply" unFocusColor="#4059a9">
                      <font>
@@ -240,7 +240,7 @@
                   <JFXComboBox fx:id="cmbRemark" disable="true" focusColor="#009688" layoutX="43.0" layoutY="64.0" prefHeight="31.0" prefWidth="189.0" promptText="Your Remark" unFocusColor="#4059a9" />
                </children>
             </AnchorPane>
-            <JFXTextField fx:id="txtResApplyDate" editable="false" focusColor="#009688" layoutX="44.0" layoutY="523.0" prefHeight="43.0" prefWidth="183.0" promptText="Submitted_Date" unFocusColor="#4059a9">
+            <JFXTextField fx:id="txtResApplyDate" editable="false" focusColor="#009688" layoutX="45.0" layoutY="435.0" prefHeight="43.0" prefWidth="183.0" promptText="Submitted_Date" unFocusColor="#4059a9">
                <font>
                   <Font name="Candara" size="19.0" />
                </font>
@@ -254,7 +254,7 @@
                   <Font name="Rage Italic" size="49.0" />
                </font>
             </Label>
-            <JFXButton fx:id="btnMyprofileUpdate" buttonType="RAISED" layoutX="322.0" layoutY="476.0" onAction="#actMyprofileUpdate" prefHeight="59.0" prefWidth="261.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Update" textFill="WHITE">
+            <JFXButton fx:id="btnMyprofileUpdate" buttonType="RAISED" layoutX="322.0" layoutY="369.0" onAction="#actMyprofileUpdate" prefHeight="59.0" prefWidth="261.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Update" textFill="WHITE">
                <font>
                   <Font name="Trebuchet MS" size="28.0" />
                </font>
@@ -270,57 +270,57 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-			<JFXTextField fx:id="txtLastname" focusColor="#048897" layoutX="673.0" layoutY="271.0" prefHeight="48.0" prefWidth="207.0" promptText="Your Lastname" unFocusColor="#1f367c">
+			<JFXTextField fx:id="txtLastname" focusColor="#048897" layoutX="673.0" layoutY="164.0" prefHeight="48.0" prefWidth="207.0" promptText="Your Lastname" unFocusColor="#1f367c">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXTextField>
-             <JFXTextField fx:id="txtFirstname" focusColor="#048897" layoutX="452.0" layoutY="271.0" prefHeight="48.0" prefWidth="207.0" promptText="Your Firstname" unFocusColor="#1f367c">
+             <JFXTextField fx:id="txtFirstname" focusColor="#048897" layoutX="452.0" layoutY="164.0" prefHeight="48.0" prefWidth="207.0" promptText="Your Firstname" unFocusColor="#1f367c">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXTextField>
-            <JFXComboBox fx:id="cmbTitle" focusColor="#048897" layoutX="334.0" layoutY="271.0" prefHeight="48.0" prefWidth="102.0" promptText="Title" unFocusColor="#1f367c">
+            <JFXComboBox fx:id="cmbTitle" focusColor="#048897" layoutX="334.0" layoutY="164.0" prefHeight="48.0" prefWidth="102.0" promptText="Title" unFocusColor="#1f367c">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXComboBox>
-            <JFXTextField fx:id="txtHomeno" focusColor="#048897" layoutX="334.0" layoutY="394.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your HomeNo" unFocusColor="#1f367c">
+            <JFXTextField fx:id="txtHomeno" focusColor="#048897" layoutX="334.0" layoutY="287.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your HomeNo" unFocusColor="#1f367c">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtMobileno" focusColor="#048897" layoutX="334.0" layoutY="333.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your MobileNo" unFocusColor="#1f367c">
+            <JFXTextField fx:id="txtMobileno" focusColor="#048897" layoutX="334.0" layoutY="226.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your MobileNo" unFocusColor="#1f367c">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtUsername" disable="true" editable="false" focusColor="#048897" layoutX="332.0" layoutY="209.0" prefHeight="48.0" prefWidth="545.0" promptText="Your Username" unFocusColor="#1f367c">
+            <JFXTextField fx:id="txtUsername" disable="true" editable="false" focusColor="#048897" layoutX="332.0" layoutY="102.0" prefHeight="48.0" prefWidth="545.0" promptText="Your Username" unFocusColor="#1f367c">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXTextField>
-            <Label layoutX="127.0" layoutY="209.0" prefHeight="48.0" prefWidth="174.0" text="Username :" textFill="#080865">
+            <Label layoutX="127.0" layoutY="102.0" prefHeight="48.0" prefWidth="174.0" text="Username :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="127.0" layoutY="271.0" prefHeight="48.0" prefWidth="174.0" text="Fullname :" textFill="#080865">
+            <Label layoutX="127.0" layoutY="164.0" prefHeight="48.0" prefWidth="174.0" text="Fullname :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="127.0" layoutY="333.0" prefHeight="48.0" prefWidth="174.0" text="Mobile No  :" textFill="#080865">
+            <Label layoutX="127.0" layoutY="226.0" prefHeight="48.0" prefWidth="174.0" text="Mobile No  :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="127.0" layoutY="396.0" prefHeight="48.0" prefWidth="174.0" text="Home No   :" textFill="#080865">
+            <Label layoutX="127.0" layoutY="289.0" prefHeight="48.0" prefWidth="174.0" text="Home No   :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="444.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="596.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/icons8-administrator-male-100.png" />
                </image>
@@ -329,37 +329,37 @@
       </AnchorPane>
       <AnchorPane fx:id="ancMenuChangePw_HO" layoutX="325.0" layoutY="195.0" prefHeight="650.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
          <children>
-            <Label layoutX="109.0" layoutY="178.0" prefHeight="48.0" prefWidth="216.0" text="Current Password :" textFill="#080865">
+            <Label layoutX="109.0" layoutY="99.0" prefHeight="48.0" prefWidth="216.0" text="Current Password :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <JFXPasswordField fx:id="pwdCurrentPw" layoutX="367.0" layoutY="178.0" onMouseExited="#checkOldPwWithDb" prefHeight="48.0" prefWidth="445.0">
+            <JFXPasswordField fx:id="pwdCurrentPw" layoutX="367.0" layoutY="99.0" onMouseExited="#checkOldPwWithDb" prefHeight="48.0" prefWidth="445.0">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXPasswordField>
-            <Label layoutX="109.0" layoutY="374.0" prefHeight="48.0" prefWidth="216.0" text="Confirm Password :" textFill="#080865">
+            <Label layoutX="109.0" layoutY="265.0" prefHeight="48.0" prefWidth="216.0" text="Confirm Password :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <JFXPasswordField fx:id="pwdConfirmPw" disable="true" layoutX="367.0" layoutY="374.0" prefHeight="48.0" prefWidth="445.0">
+            <JFXPasswordField fx:id="pwdConfirmPw" disable="true" layoutX="367.0" layoutY="260.0" prefHeight="48.0" prefWidth="445.0">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXPasswordField>
-            <Label layoutX="109.0" layoutY="283.0" prefHeight="48.0" prefWidth="216.0" text="New Password :" textFill="#080865">
+            <Label layoutX="109.0" layoutY="182.0" prefHeight="48.0" prefWidth="216.0" text="New Password :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <JFXPasswordField fx:id="pwdNewpw" disable="true" layoutX="367.0" layoutY="283.0" prefHeight="48.0" prefWidth="445.0">
+            <JFXPasswordField fx:id="pwdNewpw" disable="true" layoutX="367.0" layoutY="177.0" prefHeight="48.0" prefWidth="445.0">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXPasswordField>
-            <JFXButton fx:id="btnChangwPwSubmit" buttonType="RAISED" disable="true" layoutX="335.0" layoutY="471.0" onAction="#actChangwPwSubmit" prefHeight="59.0" prefWidth="305.0" style="-fx-background-color: #1f367c; -fx-background-radius: 5px;" text="Submit" textFill="WHITE">
+            <JFXButton fx:id="btnChangwPwSubmit" buttonType="RAISED" disable="true" layoutX="335.0" layoutY="339.0" onAction="#actChangwPwSubmit" prefHeight="59.0" prefWidth="305.0" style="-fx-background-color: #1f367c; -fx-background-radius: 5px;" text="Submit" textFill="WHITE">
                <font>
                   <Font name="Trebuchet MS" size="28.0" />
                </font>
@@ -375,7 +375,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Label fx:id="lblAlertCurrentPw" layoutX="367.0" layoutY="238.0" prefHeight="36.0" prefWidth="445.0" textFill="#e11a1a">
+            <Label fx:id="lblAlertCurrentPw" layoutX="367.0" layoutY="159.0" prefHeight="36.0" prefWidth="445.0" textFill="#e11a1a">
                <font>
                   <Font size="17.0" />
                </font>
@@ -390,7 +390,7 @@
                   <Font name="Rage Italic" size="49.0" />
                </font>
             </Label>
-            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="443.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="627.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/icons8-password-100.png" />
                </image>

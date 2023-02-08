@@ -136,9 +136,14 @@ public class admin implements Initializable {
         String sql="insert into workers(title,firstname,lastname,personalno,homeno,workerroll,username)values(?,?,?,?,?,?,?)";
         try{
             pst =conn.prepareStatement(sql);
+            String FltrFname = addwfirstname.getText().toString().substring(0, 1).toUpperCase();
+            String FNme= FltrFname + addwfirstname.getText().toString().substring(1);
+            String FltrLname = addwlastname.getText().toString().substring(0, 1).toUpperCase();
+            String LNme= FltrFname + addwlastname.getText().toString().substring(1);
+
             pst.setString(1,addwtitle.getValue().toString());
-            pst.setString(2,addwfirstname.getText());
-            pst.setString(3,addwlastname.getText());
+            pst.setString(2,FNme);
+            pst.setString(3,LNme);
             pst.setString(4,addwpersonalno.getText());
             pst.setString(5,addwhomeno.getText());
             pst.setString(6,addwuserroll.getValue().toString());

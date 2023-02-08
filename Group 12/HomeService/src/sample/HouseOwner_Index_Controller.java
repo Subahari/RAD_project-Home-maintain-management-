@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.sun.xml.internal.ws.util.StringUtils;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -224,8 +225,9 @@ public class HouseOwner_Index_Controller {
 
             while (rs.next()) {
                 wTitle= rs.getString("title");
-                wFname=rs.getString("firstname");
-                wLname=rs.getString("lastname");
+                wFname= rs.getString("firstname").substring(0, 1).toUpperCase();
+                System.out.println(wFname);
+                wLname=rs.getString("lastname").substring(0, 1).toUpperCase();
                 wFullname=wTitle+". "+wFname+" "+wLname;
 
                 oblist.addAll(new ReservationTable(rs.getInt("reservation_id"),(rs.getInt("home_owner_id")),wFullname, rs.getString("reservation_date"), rs.getString("reservation_start_time"), rs.getString("reservation_end_time"), rs.getString("reservation_details"),rs.getString("submit_dateTime"), rs.getString("worker_remark"),rs.getString("worker_reply"), rs.getString("homeowner_reply")));

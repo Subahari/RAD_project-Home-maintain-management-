@@ -17,11 +17,11 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="835.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HouseOwner_Index_Controller">
+<AnchorPane prefHeight="676.0" prefWidth="1301.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HouseOwner_Index_Controller">
    <children>
-      <AnchorPane prefHeight="190.0" prefWidth="1200.0" style="-fx-background-color: #ff8383;">
+      <AnchorPane layoutX="1.0" layoutY="14.0" prefHeight="182.0" prefWidth="1300.0" style="-fx-background-color: #ff8383;">
          <children>
-            <ImageView fitHeight="130.0" fitWidth="1300.0" pickOnBounds="true">
+            <ImageView fitHeight="105.0" fitWidth="1300.0" layoutY="-14.0" pickOnBounds="true">
                <image>
                   <Image url="@images/3259.jpg" />
                </image>
@@ -52,9 +52,9 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutY="190.0" prefHeight="645.0" prefWidth="325.0" style="-fx-background-color: #ffe8e8;">
+      <AnchorPane layoutY="190.0" prefHeight="488.0" prefWidth="325.0" style="-fx-background-color: #ffe8e8;">
          <children>
-            <AnchorPane fx:id="ancHouseownerSidebar" layoutX="7.0" layoutY="71.0" prefHeight="556.0" prefWidth="313.0">
+            <AnchorPane fx:id="ancHouseownerSidebar" layoutX="7.0" layoutY="71.0" prefHeight="427.0" prefWidth="305.0">
                <children>
                   <JFXButton fx:id="btnMenuViewWorkers_HO" buttonType="RAISED" layoutX="77.0" layoutY="117.0" onAction="#actMenuViewWorkers_HO" prefHeight="50.0" prefWidth="227.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="View Workers" textFill="WHITE">
                      <font>
@@ -177,22 +177,22 @@
                </textFill>
             </Label>
          </children></AnchorPane>
-	  <AnchorPane fx:id="ancHome_HO" layoutX="325.0" layoutY="190.0" prefHeight="645.0" prefWidth="975.0">
+	  <AnchorPane fx:id="ancHome_HO" layoutX="325.0" layoutY="190.0" prefHeight="491.0" prefWidth="957.0">
          <children>
-            <ImageView fitHeight="645.0" fitWidth="975.0" pickOnBounds="true">
+            <ImageView fitHeight="497.0" fitWidth="975.0" pickOnBounds="true">
                <image>
                   <Image url="@images/Home-Services-Pic1.jpg" />
                </image>
             </ImageView>
          </children></AnchorPane>
-     <AnchorPane fx:id="ancMyReservation_HO" layoutX="325.0" layoutY="190.0" prefHeight="645.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
+     <AnchorPane fx:id="ancMyReservation_HO" layoutX="325.0" layoutY="190.0" prefHeight="562.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
          <children>
-            <Label layoutX="320.0" layoutY="10.0" prefHeight="76.0" prefWidth="305.0" text="My Reservation" textFill="#0b6d7c" underline="true">
+            <Label layoutX="320.0" layoutY="-14.0" prefHeight="76.0" prefWidth="305.0" text="My Reservation" textFill="#0b6d7c" underline="true">
                <font>
                   <Font name="Rage Italic" size="49.0" />
                </font>
             </Label>
-            <TableView fx:id="tabMyReservation" layoutX="29.0" layoutY="106.0" onMouseClicked="#clickResRow" prefHeight="297.0" prefWidth="925.0" stylesheets="@table.css">
+            <TableView fx:id="tabMyReservation" layoutX="26.0" layoutY="53.0" onMouseClicked="#clickResRow" prefHeight="262.0" prefWidth="925.0" stylesheets="@table.css">
                <columns>
                   <TableColumn fx:id="colResID" prefWidth="68.0" text="Res_ID" />
                   <TableColumn fx:id="colResWorkerName" minWidth="0.0" prefWidth="177.0" text="Worker_Name" />
@@ -209,7 +209,7 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <AnchorPane layoutX="165.0" layoutY="526.0" prefHeight="98.0" prefWidth="615.0">
+            <AnchorPane layoutX="165.0" layoutY="423.0" prefHeight="98.0" prefWidth="615.0">
                <children>
                   <JFXButton fx:id="btnResSubmitReply" alignment="CENTER_RIGHT" buttonType="RAISED" disable="true" layoutX="79.0" layoutY="17.0" onAction="#actResSubmitReply" prefHeight="65.0" prefWidth="216.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="SEND-REPLY" textFill="#ed9918">
                      <font>
@@ -255,7 +255,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="17.0" layoutY="410.0" prefHeight="105.0" prefWidth="942.0">
+            <AnchorPane layoutX="18.0" layoutY="317.0" prefHeight="105.0" prefWidth="942.0">
                <children>
                   <JFXTextArea fx:id="txtResMyReply" disable="true" focusColor="#009688" layoutX="619.0" layoutY="10.0" prefHeight="84.0" prefWidth="296.0" promptText="Enter Your Reply" unFocusColor="#4059a9">
                      <font>
@@ -270,7 +270,7 @@
                         <Font name="Candara" size="19.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="txtResApplyDate" editable="false" focusColor="#009688" layoutX="46.0" layoutY="52.0" prefHeight="43.0" prefWidth="183.0" promptText="Submitted_Date" unFocusColor="#4059a9">
+                  <JFXTextField fx:id="txtResApplyDate" editable="false" focusColor="#009688" layoutX="46.0" layoutY="48.0" prefHeight="43.0" prefWidth="183.0" promptText="Submitted_Date" unFocusColor="#4059a9">
                      <font>
                         <Font name="Candara" size="19.0" />
                      </font>
@@ -279,14 +279,14 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="ancMyProfile_HO" layoutX="325.0" layoutY="190.0" prefHeight="645.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
+      <AnchorPane fx:id="ancMyProfile_HO" layoutX="325.0" layoutY="190.0" prefHeight="599.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
          <children>
-            <Label layoutX="380.0" prefHeight="76.0" prefWidth="216.0" text="My Profile" textFill="#0b6d7c" underline="true">
+            <Label layoutX="380.0" layoutY="-18.0" prefHeight="76.0" prefWidth="216.0" text="My Profile" textFill="#0b6d7c" underline="true">
                <font>
                   <Font name="Rage Italic" size="49.0" />
                </font>
             </Label>
-            <JFXButton fx:id="btnMyprofileUpdate" buttonType="RAISED" layoutX="358.0" layoutY="540.0" onAction="#actMyprofileUpdate" prefHeight="59.0" prefWidth="261.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Update" textFill="WHITE">
+            <JFXButton fx:id="btnMyprofileUpdate" buttonType="RAISED" layoutX="358.0" layoutY="427.0" onAction="#actMyprofileUpdate" prefHeight="5.0" prefWidth="174.0" style="-fx-background-color: #e76666; -fx-background-radius: 5px;" text="Update" textFill="WHITE">
                <font>
                   <Font name="Trebuchet MS" size="28.0" />
                </font>
@@ -302,84 +302,84 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-			<JFXTextField fx:id="txtLastname" focusColor="#048897" layoutX="666.0" layoutY="226.0" prefHeight="48.0" prefWidth="207.0" promptText="Your Lastname" unFocusColor="#1f367c">
+			<JFXTextField fx:id="txtLastname" focusColor="#048897" layoutX="666.0" layoutY="125.0" prefHeight="48.0" prefWidth="207.0" promptText="Your Lastname" unFocusColor="#1f367c">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXTextField>
-             <JFXTextField fx:id="txtFirstname" focusColor="#048897" layoutX="445.0" layoutY="226.0" prefHeight="48.0" prefWidth="207.0" promptText="Your Firstname" unFocusColor="#1f367c">
+             <JFXTextField fx:id="txtFirstname" focusColor="#048897" layoutX="445.0" layoutY="125.0" prefHeight="48.0" prefWidth="207.0" promptText="Your Firstname" unFocusColor="#1f367c">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXTextField>
-            <JFXComboBox fx:id="cmbTitle" focusColor="#048897" layoutX="327.0" layoutY="226.0" prefHeight="48.0" prefWidth="102.0" promptText="Title" unFocusColor="#1f367c">
+            <JFXComboBox fx:id="cmbTitle" focusColor="#048897" layoutX="327.0" layoutY="125.0" prefHeight="48.0" prefWidth="102.0" promptText="Title" unFocusColor="#1f367c">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXComboBox>
-            <JFXTextField fx:id="txtHomeno" focusColor="#048897" layoutX="327.0" layoutY="349.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your HomeNo" unFocusColor="#1f367c">
+            <JFXTextField fx:id="txtHomeno" focusColor="#048897" layoutX="327.0" layoutY="248.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your HomeNo" unFocusColor="#1f367c">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtMobileno" focusColor="#048897" layoutX="327.0" layoutY="288.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your MobileNo" unFocusColor="#1f367c">
+            <JFXTextField fx:id="txtMobileno" focusColor="#048897" layoutX="327.0" layoutY="187.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your MobileNo" unFocusColor="#1f367c">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtUsername" disable="true" editable="false" focusColor="#048897" layoutX="325.0" layoutY="164.0" prefHeight="48.0" prefWidth="545.0" promptText="Your Username" unFocusColor="#1f367c">
+            <JFXTextField fx:id="txtUsername" disable="true" editable="false" focusColor="#048897" layoutX="324.0" layoutY="64.0" prefHeight="48.0" prefWidth="545.0" promptText="Your Username" unFocusColor="#1f367c">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtAddress" focusColor="#048897" layoutX="327.0" layoutY="410.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your Address" unFocusColor="#1f367c">
+            <JFXTextField fx:id="txtAddress" focusColor="#048897" layoutX="327.0" layoutY="309.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your Address" unFocusColor="#1f367c">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtEmail" focusColor="#048897" layoutX="327.0" layoutY="470.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your Email Address" unFocusColor="#1f367c">
+            <JFXTextField fx:id="txtEmail" focusColor="#048897" layoutX="327.0" layoutY="369.0" prefHeight="48.0" prefWidth="545.0" promptText="Enter Your Email Address" unFocusColor="#1f367c">
                <font>
                   <Font name="Candara" size="22.0" />
                </font>
             </JFXTextField>
-            <Label layoutX="120.0" layoutY="164.0" prefHeight="48.0" prefWidth="174.0" text="Username :" textFill="#080865">
+            <Label layoutX="120.0" layoutY="64.0" prefHeight="48.0" prefWidth="174.0" text="Username :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="120.0" layoutY="410.0" prefHeight="48.0" prefWidth="174.0" text="Address     :" textFill="#080865">
+            <Label layoutX="120.0" layoutY="309.0" prefHeight="48.0" prefWidth="174.0" text="Address     :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="120.0" layoutY="226.0" prefHeight="48.0" prefWidth="174.0" text="Fullname :" textFill="#080865">
+            <Label layoutX="120.0" layoutY="125.0" prefHeight="48.0" prefWidth="174.0" text="Fullname :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="120.0" layoutY="288.0" prefHeight="48.0" prefWidth="174.0" text="Mobile No  :" textFill="#080865">
+            <Label layoutX="120.0" layoutY="187.0" prefHeight="48.0" prefWidth="174.0" text="Mobile No  :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="120.0" layoutY="351.0" prefHeight="48.0" prefWidth="174.0" text="Home No   :" textFill="#080865">
+            <Label layoutX="120.0" layoutY="250.0" prefHeight="48.0" prefWidth="174.0" text="Home No   :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="120.0" layoutY="470.0" prefHeight="48.0" prefWidth="174.0" text="Email Address :" textFill="#080865">
+            <Label layoutX="120.0" layoutY="369.0" prefHeight="48.0" prefWidth="174.0" text="Email Address :" textFill="#080865">
                <font>
                   <Font name="Cambria" size="23.0" />
                </font>
             </Label>
-            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="444.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="585.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/icons8-administrator-male-100.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="ancMenuChangePw_HO" layoutX="325.0" layoutY="190.0" prefHeight="645.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
+      <AnchorPane fx:id="ancMenuChangePw_HO" layoutX="325.0" layoutY="190.0" prefHeight="497.0" prefWidth="975.0" style="-fx-background-color: #d2e9ee;" visible="false">
          <children>
             <Label layoutX="109.0" layoutY="178.0" prefHeight="48.0" prefWidth="216.0" text="Current Password :" textFill="#080865">
                <font>
