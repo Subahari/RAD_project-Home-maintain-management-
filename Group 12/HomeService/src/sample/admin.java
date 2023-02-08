@@ -138,8 +138,8 @@ public class admin implements Initializable {
             pst =conn.prepareStatement(sql);
             String FltrFname = addwfirstname.getText().toString().substring(0, 1).toUpperCase();
             String FNme= FltrFname + addwfirstname.getText().toString().substring(1);
-            String FltrLname = addwlastname.getText().toString().substring(0, 1).toUpperCase();
-            String LNme= FltrFname + addwlastname.getText().toString().substring(1);
+            String LLname = addwlastname.getText().toString().substring(0, 1).toUpperCase();
+            String LNme= LLname + addwlastname.getText().toString().substring(1);
 
             pst.setString(1,addwtitle.getValue().toString());
             pst.setString(2,FNme);
