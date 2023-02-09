@@ -195,7 +195,7 @@
             <TableView fx:id="tabMyReservation" layoutX="26.0" layoutY="53.0" onMouseClicked="#clickResRow" prefHeight="262.0" prefWidth="925.0" stylesheets="@table.css">
                <columns>
                   <TableColumn fx:id="colResID" prefWidth="68.0" text="Res_ID" />
-                  <TableColumn fx:id="colResWorkerName" minWidth="0.0" prefWidth="177.0" text="Worker_Name" />
+                  <TableColumn fx:id="colResWorkerName" minWidth="0.0" prefWidth="89.0" text="Worker_Name"  />
                   <TableColumn fx:id="colResDate" prefWidth="99.0" text="Res_Date" />
                   <TableColumn fx:id="colResStartTime" prefWidth="89.0" text="Start_Time" />
                   <TableColumn fx:id="colResEndTime" prefWidth="84.0" text="End_Time" />
