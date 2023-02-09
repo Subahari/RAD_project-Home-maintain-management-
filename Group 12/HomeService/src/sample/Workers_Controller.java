@@ -372,7 +372,24 @@ public class Workers_Controller {
             ResultSet rs = con.createStatement().executeQuery(query);
 
             while (rs.next()) {
-                oblist.addAll(new WorkersTable(rs.getInt("workerID"), rs.getString("firstname"), rs.getString("lastname"), rs.getInt("personalno"), rs.getInt("homeno")));
+                /*
+                tring FltrFname = addwfirstname.getText().toString().substring(0, 1).toUpperCase();
+            String FNme= FltrFname + addwfirstname.getText().toString().substring(1);
+            String LLname = addwlastname.getText().toString().substring(0, 1).toUpperCase();
+            String LNme= LLname + addwlastname.getText().toString().substring(1);
+                */
+                String firtLetter = rs.getString("firstname").substring(0,1).toUpperCase();
+                String firstName = firtLetter + rs.getString("firstname").substring(1).toLowerCase();
+
+                 String firtLetterL = rs.getString("lastname").substring(0,1).toUpperCase();
+                String lastName = firtLetterL + rs.getString("lastname").substring(1).toLowerCase();
+
+                rs.getString("lastname");
+                oblist.addAll(new WorkersTable(rs.getInt("workerID"), 
+                firstName,
+                lastName,
+                rs.getInt("personalno"), 
+                rs.getInt("homeno")));
             }
         } catch (SQLException ex) {
             Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);

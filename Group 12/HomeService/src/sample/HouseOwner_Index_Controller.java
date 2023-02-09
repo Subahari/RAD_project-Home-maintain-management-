@@ -225,9 +225,9 @@ public class HouseOwner_Index_Controller {
 
             while (rs.next()) {
                 wTitle= rs.getString("title");
-                wFname= rs.getString("firstname").substring(0, 1).toUpperCase();
+                wFname= rs.getString("firstname");
                 System.out.println(wFname);
-                wLname=rs.getString("lastname").substring(0, 1).toUpperCase();
+                wLname=rs.getString("lastname");
                 wFullname=wTitle+". "+wFname+" "+wLname;
 
                 oblist.addAll(new ReservationTable(rs.getInt("reservation_id"),(rs.getInt("home_owner_id")),wFullname, rs.getString("reservation_date"), rs.getString("reservation_start_time"), rs.getString("reservation_end_time"), rs.getString("reservation_details"),rs.getString("submit_dateTime"), rs.getString("worker_remark"),rs.getString("worker_reply"), rs.getString("homeowner_reply")));
